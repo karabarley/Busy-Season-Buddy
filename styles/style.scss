@@ -1,0 +1,118 @@
+@import "partials/variables";
+@import "partials/setup";
+@import "partials/quiz";
+
+html,body {
+  background-color:#000;
+}
+html{
+
+    color: white;
+    background: url('care.jpg');
+    // Attributions: 
+    //<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    background-repeat: repeat;
+}
+
+#coverpage, #quiz{
+    background: #000;
+    background: url('care.jpg');
+}
+
+section{
+    display: relative;
+    margin-top: 2vh; 
+    top: 10%;
+    height: 80vh;
+    background: #000;
+    background: url('care.jpg');
+    background-repeat: repeat;
+}
+
+.wrapper {
+    width: 50vw;
+    height: 105vh;
+    margin: auto;
+    background: black;
+    text-align: center;
+}
+
+fieldset{
+    margin-top: 10% 0px;
+    border: none;
+}
+
+fieldset p{
+    font-size: 30px;
+}
+fieldset p, fieldset label{
+    color:white;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20px;
+    letter-spacing: 0.15rem;
+}
+
+h1:first-of-type{
+    padding-top: 5%;    
+}
+h1{
+    text-align: center;
+    line-height: 0.8;   
+}
+h1:last-of-type{
+    margin-bottom: 5%;    
+}
+fieldset p{
+    margin-top:20px; 
+}
+h1, h2{
+    font-family: 'Paytone One', sans-serif;
+	font-size: 9rem;
+    letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	color: #fff;
+    text-shadow: 
+         -1px  1px 0 #424242,
+    //  -4px  4px 0 #424242, 
+        -5px  5px 0 $pink,		
+        -6px  6px 0 $yellow,
+        -7px  7px 0 $green,
+        -8px  8px 0 $lightBlue,
+        // -9px  9px 0#33658A,
+        // -10px 10px 0 rgb(15, 95, 186),
+        -11px 11px 25px #000;
+}
+ button{
+     margin-top: 20px;
+ }
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background:$purple;
+    border: none;
+}
+
+
+// Responsive Tags
+@media (max-width: 1100px) {
+
+    h1, #quiz h2{    
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 830px) {
+
+    h1, #quiz h2{    
+        font-size: 5.5rem;
+    }
+    
+}
+@media (max-width: 615px) {
+
+    h1, #quiz h2{    
+        font-size: 3rem;
+    }
+}   

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:300|Paytone+One" rel="stylesheet">
+    <!-- bootstrap docs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- my javascript -->
+    <script src="script.js"></script>
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- This section is where we will obtain user inputs before proceeding with the quiz -->
+    <section id="coverpage">
+        <div class="wrapper">
+            <header>
+                <div class="appDescription">
+                    <h1 class="title">Busy</h1>
+                    <h1>Season</h1>
+                    <!-- The data in the span will change based on user input (form - relationship) -->
+                    <h1><span>Buddy</span></h1>
+
+                </div>
+            </header>
+            <!-- Form starts here -->
+            <form id="user-inputs" action="">
+                    <!-- user input (form - relationship) -->
+                   <fieldset>
+                        <p>What is your relationship with the CPA/ CPA candidate?</p>
+                        <select required>
+                            <option value="">Choose</option>
+                            <option value="Boyfriend">Boyfriend</option>
+                            <option value="Girlfriend">Girlfriend</option>
+                            <option value="Husband">Husband</option>s
+                            <option value="Wifey">Wife</option>
+                            <option value="Buddy">Just Good Friends</option>
+                        </select>
+                        <br/>
+                    </fieldset>
+                    <!-- user input (form - name) -->
+                    <fieldset>
+                        <p>What is the CPA's first name?</p>
+                        <input type="text" placeholder="e.g. Bryan" id="firstName" name="firstName" required />
+                        <br/>
+                    </fieldset>
+                    <!-- user input (form - preferredPronoun) -->
+                    <fieldset >
+                        <p>What is the CPA's preferred pronoun?</p>
+                        <input type="radio" name="pronoun" id="he" value="he's" required />
+                        <label for="he">He</label>
+                        <input type="radio" name="pronoun" id="she" value="she's" required />
+                        <label for="she">She</label>
+                        <input type="radio" name="pronoun" id="they" value="they're" required />
+                        <label for="they">They</label>
+                    </fieldset>
+                    <br/>
+                    <!-- This button riggers transition to quiz section -->
+                    <input type="submit" disabled="disabled" id="begin" value=" Let's begin" class="btn btn-primary"/>
+            </form>
+        </div>
+    </section >
+   <!-- In this section, the user will select which situation applies to his/her partner. Based on the situation selected, the corresponding action point will be displayed onto the modal-->
+    <section id="quiz">
+        <div class="wrapper ">
+                    <h2>What's been going on?</h2>
+                    <!-- Situation description <h4> will depend on what the user selects-->
+                    <h3 class="situationDescription"> &nbsp</h3>
+                    <!-- List of icons that represent different situations start here -->
+                    <ul id="context">
+                        <!-- i = 0 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
+                        </button>
+                        </li>
+                        <!-- i = 1 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-cutlery fa-3x" aria-hidden="true"></i>
+                        </button>
+                        </li>
+                        <!-- i = 2 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+                        </button>
+                        </li>
+                        <!-- i =3 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-bicycle fa-3x" aria-hidden="true"></i>
+                        </button>
+                        </li>
+                        <!-- i = 4 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-cloud fa-3x" aria-hidden="true"></i>
+                        </button>
+                        </li>
+                        <!-- i = 5 -->
+                    <li class="option">
+                        <button>
+                            <i class="fa fa-frown-o fa-3x" ria-hidden="true"></i>
+                        </button>
+                        </li>
+                    </ul>
+                   
+
+            <!-- This button triggers the action point response to pop up -->
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"  id="results" disabled>
+                That's the one!
+            </button>
+            <!-- This modal pops up to provide user with the suggested action points based on the situations they suggested -->
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>What you can do about it</h2>
+                        </div>
+                        <div class="modal-body">
+                            <!-- This div is where the action description is displayed-->
+                            <div class="actionDescription">
+                                 &nbsp
+                            </div>
+                            <!-- This is where the giphy is displays based on the user selection  -->
+                            <img src="placeholder giphy" alt="giphy" class="giphy">
+                        </div>
+                        <div class="modal-footer">
+                            <!-- Twitter button -->
+                            <button type="button" class="btn btn-default">
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Ill%20be%20there%20for%20you" data-size="large">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                Tweet
+                            </a>
+                            </button>
+                           <!-- This button ends the quiz and takes the user back to the first page -->
+                            <button type="button" class="btn btn-primary end-quiz">
+                                End Quiz</button>
+                            <!-- This button ends the quiz and takes the user back to the situations page -->
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+                        </div>
+
+                    </div>
+                    <!-- end of modal-content -->
+                </div>
+                <!-- end of modal-dialog -->
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>   
+
