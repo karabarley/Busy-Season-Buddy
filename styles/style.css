@@ -244,33 +244,23 @@ h3 {
   h3.situationDescription {
     font-size: 25px; } }
 
-html, body {
-  background-color: #000; }
-
 html {
   color: white;
-  background: url("care.jpg");
-  background-repeat: repeat; }
-
-header {
-  color: blue; }
+  background-color: #000; }
 
 #coverpage, #quiz {
-  background: #000;
-  background: url("care.jpg"); }
+  background: #000; }
 
 section {
   display: relative;
-  margin-top: 2vh;
+  margin-top: 1%;
   top: 10%;
-  height: 80vh;
-  background: #000;
-  background: url("care.jpg");
-  background-repeat: repeat; }
+  height: 100%;
+  background: black; }
 
 .wrapper {
   width: 50vw;
-  height: 105vh;
+  height: 100%;
   margin: auto;
   background: black;
   text-align: center; }
@@ -303,7 +293,7 @@ fieldset p {
 
 h1, h2 {
   font-family: 'Paytone One', sans-serif;
-  font-size: 9rem;
+  font-size: 8rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   color: #fff;

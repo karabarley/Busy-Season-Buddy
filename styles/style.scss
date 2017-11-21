@@ -2,36 +2,27 @@
 @import "partials/setup";
 @import "partials/quiz";
 
-html,body {
-  background-color:#000;
-}
 html{
-
     color: white;
-    background: url('care.jpg');
+     background-color:#000;
     // Attributions: 
     //<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    background-repeat: repeat;
 }
-
 #coverpage, #quiz{
     background: #000;
-    background: url('care.jpg');
 }
 
 section{
     display: relative;
-    margin-top: 2vh; 
+    margin-top: 1%; 
     top: 10%;
-    height: 80vh;
-    background: #000;
-    background: url('care.jpg');
-    background-repeat: repeat;
+    height: 100%;
+    background: black 
 }
 
 .wrapper {
     width: 50vw;
-    height: 105vh;
+    height: 100%;
     margin: auto;
     background: black;
     text-align: center;
@@ -67,7 +58,7 @@ fieldset p{
 }
 h1, h2{
     font-family: 'Paytone One', sans-serif;
-	font-size: 9rem;
+	font-size: 8rem;
     letter-spacing: 0.1rem;
 	text-transform: uppercase;
 	color: #fff;
